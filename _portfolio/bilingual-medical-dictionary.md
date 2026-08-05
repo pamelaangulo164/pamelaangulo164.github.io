@@ -240,6 +240,19 @@ POST /api/v1/add
 
 The POST endpoint accepts a JSON payload containing an English term, part of speech, definition, Spanish term, grammatical gender, and optional example sentences. It validates the request before passing the information to the service and repository layers.
 
+### Dockerized MySQL Database
+
+The application stores its dictionary entries in a MySQL database running inside a Docker container. Docker Compose provided a consistent database environment and reduced the amount of local configuration needed to run the project. The Flask application connects to the container through the MySQL port exposed on the local machine.
+
+<img
+  class="project-image"
+  src="{{ '/images/mysql-docker.png' | relative_url }}"
+  alt="MySQL database running inside a Docker container">
+
+<p class="image-caption">
+Figure 3. MySQL Docker container running the database used by the Bilingual Medical Dictionary API.
+</p>
+
 ## Testing
 
 I used pytest to test the project components. The tests covered the model classes, service behavior, and repository operations. Keeping tests in a separate directory made it possible to verify individual parts of the application without relying only on manual testing through the browser.

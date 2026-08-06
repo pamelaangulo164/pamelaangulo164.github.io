@@ -1,0 +1,911 @@
+---
+title: "SafeStep: An Agentic AI Assistant for Digital Safety"
+excerpt: "An AI-powered assistant designed to help older adults and non-technical users navigate digital tasks safely and independently."
+permalink: /portfolio/safestep/
+author_profile: true
+header:
+  teaser: /images/maistro-workflow.jpg
+---
+
+<style>
+  .project-hero {
+    margin-bottom: 2rem;
+  }
+
+  .project-subtitle {
+    margin-top: -0.75rem;
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .project-summary {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 4px solid #4a6fa5;
+    background-color: #f7f8fa;
+  }
+
+  .project-summary p:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-metadata {
+    width: 100%;
+    margin: 1.5rem 0 2rem;
+    border-collapse: collapse;
+  }
+
+  .project-metadata th,
+  .project-metadata td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .project-metadata th {
+    width: 28%;
+    background-color: #f5f5f5;
+  }
+
+  .project-image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 2rem auto 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+
+  .image-caption {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .feature-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+  }
+
+  .callout {
+    margin: 2rem 0;
+    padding: 1.25rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+
+  .workflow-list {
+    margin: 1.5rem 0 2rem;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: workflow-counter;
+  }
+
+  .workflow-list li {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 3.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    counter-increment: workflow-counter;
+  }
+
+  .workflow-list li::before {
+    position: absolute;
+    top: 0.85rem;
+    left: 1rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background-color: #4a6fa5;
+    color: white;
+    content: counter(workflow-counter);
+    font-weight: bold;
+    line-height: 1.9rem;
+    text-align: center;
+  }
+
+  .code-example {
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f6f8fa;
+  }
+
+  .code-example code {
+    font-size: 0.9rem;
+    white-space: pre;
+  }
+
+  .outcome-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .project-button {
+    display: inline-block;
+    margin: 0.25rem 0.4rem 0.25rem 0;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    background-color: #4a6fa5;
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  .project-button:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .project-metadata th,
+    .project-metadata td {
+      display: block;
+      width: 100%;
+    }
+
+    .project-metadata th {
+      border-bottom: 0;
+    }
+
+    .workflow-list li {
+      padding-left: 3.5rem;
+    }
+  }
+</style>
+
+<section class="project-hero">
+  <h1>SafeStep: An Agentic AI Assistant for Digital Safety</h1>
+
+  <p class="project-subtitle">
+    Internship project developed using NeuralSeek's mAIstro platform
+  </p>
+</section>
+
+<div class="project-summary">
+  <p>
+    During my internship at NeuralSeek, I conceived, designed, and built
+    <strong>SafeStep</strong>, an AI-powered digital assistant intended to help
+    older adults and non-technical users navigate smartphones, computers,
+    websites, and online services more safely and independently.
+  </p>
+
+  <p>
+    I developed the project from its initial concept through its final company
+    presentation. My work included defining the use case, designing the agent
+    workflow, writing and refining prompts, testing conversations, evaluating
+    responses, collaborating with other interns, and presenting the completed
+    solution to NeuralSeek.
+  </p>
+</div>
+
+<table class="project-metadata">
+  <tbody>
+    <tr>
+      <th>Organization</th>
+      <td>NeuralSeek</td>
+    </tr>
+    <tr>
+      <th>Project</th>
+      <td>SafeStep</td>
+    </tr>
+    <tr>
+      <th>Project type</th>
+      <td>Agentic AI and conversational assistant design</td>
+    </tr>
+    <tr>
+      <th>Platform</th>
+      <td>NeuralSeek mAIstro</td>
+    </tr>
+    <tr>
+      <th>Primary audience</th>
+      <td>
+        Older adults, non-technical users, caregivers, and people affected by
+        digital exclusion
+      </td>
+    </tr>
+    <tr>
+      <th>My responsibilities</th>
+      <td>
+        Concept development, workflow design, prompt engineering,
+        conversational testing, iterative refinement, collaboration,
+        documentation, and final presentation
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Project Overview</h2>
+
+<p>
+  Digital services are increasingly necessary for communication, healthcare,
+  banking, shopping, account management, and access to public resources.
+  However, many digital systems assume that users already understand technical
+  terminology, interface conventions, account security, and online safety.
+  These assumptions can create barriers for older adults and people with
+  limited experience using smartphones or computers.
+</p>
+
+<p>
+  I created SafeStep to address this problem through a conversational
+  interface. The agent was designed to provide patient, step-by-step guidance
+  for common digital tasks while also helping users identify suspicious
+  messages, potentially unsafe websites, phishing attempts, and other signs of
+  online fraud.
+</p>
+
+<p>
+  The project combined agentic AI design with a human-centered objective:
+  helping users complete digital tasks without making them feel embarrassed,
+  rushed, or overwhelmed. SafeStep was therefore designed not only to provide
+  information, but also to adapt its explanations to the user's level of
+  technical familiarity.
+</p>
+
+<h2>Problem Statement</h2>
+
+<p>
+  People with limited digital experience may struggle to interpret unfamiliar
+  icons, menus, security warnings, payment screens, account settings, or
+  technical instructions. Even a routine task can become difficult when an
+  interface changes or when instructions use specialized vocabulary.
+</p>
+
+<p>
+  Online scams create an additional risk. A user who is uncertain about how a
+  legitimate website, message, or payment process should behave may have
+  difficulty distinguishing normal interactions from phishing or fraudulent
+  requests. Fear of making a mistake can also discourage users from attempting
+  digital tasks independently.
+</p>
+
+<div class="callout">
+  <strong>Design question:</strong>
+  How can an AI agent provide accessible digital guidance while encouraging
+  users to remain cautious and avoid overreliance on automated advice?
+</div>
+
+<h2>Project Goals</h2>
+
+<p>The main goals of SafeStep were to:</p>
+
+<ul>
+  <li>
+    Explain smartphone, computer, application, and website tasks in plain
+    language.
+  </li>
+  <li>
+    Break complicated procedures into manageable, sequential steps.
+  </li>
+  <li>
+    Help users recognize warning signs associated with scams and phishing.
+  </li>
+  <li>
+    Support safer decision-making during online payments and account
+    interactions.
+  </li>
+  <li>
+    Adapt explanations to different levels of technical experience.
+  </li>
+  <li>
+    Increase users' confidence and independence when accessing digital
+    services.
+  </li>
+  <li>
+    Maintain a calm, patient, supportive, and nonjudgmental conversational
+    style.
+  </li>
+</ul>
+
+<h2>My Contributions</h2>
+
+<p>
+  I created the SafeStep concept myself rather than working from an assigned
+  agent idea. I identified digital literacy and online safety as an area in
+  which an agentic AI system could provide meaningful support. I then defined
+  the intended audience, problem statement, primary functions, risks, success
+  criteria, and overall value proposition.
+</p>
+
+<p>
+  Using NeuralSeek's mAIstro platform, I built the agent from scratch and
+  designed its workflow. I configured the sequence of components that process
+  user input, protect personal information, preserve conversational context,
+  classify requests, retrieve relevant information, and generate a response
+  through a managed large language model.
+</p>
+
+<p>
+  A major part of my work involved writing prompts that instructed the agent to
+  communicate clearly, avoid unnecessary technical jargon, and organize
+  responses into steps that would be easier for a beginner to follow. I also
+  defined safety-oriented behavior for questions involving suspicious links,
+  financial transactions, passwords, downloads, and possible scams.
+</p>
+
+<p>
+  I did not create the underlying knowledge base. Instead, I focused on
+  configuring how the agent interacted with the available knowledge and how
+  retrieved information should be presented to the user. This distinction was
+  important because the usefulness of an AI assistant depends not only on the
+  information available to it, but also on how that information is selected,
+  contextualized, and communicated.
+</p>
+
+<p>
+  I tested SafeStep through repeated sample conversations covering device
+  questions, online payments, suspicious links, scam concerns, and common
+  digital tasks. I reviewed whether the responses were understandable,
+  appropriately cautious, and relevant to the user's question. When a response
+  was too technical, too broad, too long, or too confident, I revised the
+  prompts and tested the interaction again.
+</p>
+
+<p>
+  I also collaborated with other interns during development and feedback
+  sessions. These discussions helped me evaluate the project from perspectives
+  beyond my own and refine how I explained the agent's audience, business
+  value, limitations, and potential applications. At the conclusion of the
+  project, I presented SafeStep to NeuralSeek.
+</p>
+
+<h2>Agent Architecture and Workflow</h2>
+
+<p>
+  SafeStep was implemented as a modular workflow in the mAIstro platform. Each
+  component performs a specific function before the final response is returned
+  to the user.
+</p>
+
+<img
+  class="project-image"
+  src="{{ '/images/maistro-workflow.jpg' | relative_url }}"
+  alt="SafeStep agent workflow built in NeuralSeek's mAIstro platform"
+>
+
+<p class="image-caption">
+  Figure 1. SafeStep workflow developed in NeuralSeek's mAIstro platform. The
+  workflow includes privacy protection, personally identifiable information
+  processing, session history, contextual instructions, Python-based task
+  classification, knowledge-base retrieval, variables, safety guidance, and
+  interaction with a managed large language model.
+</p>
+
+<h3>Workflow Components</h3>
+
+<ol class="workflow-list">
+  <li>
+    <strong>Protection layer:</strong>
+    The workflow begins with a protection component that helps prepare the
+    incoming request for safe processing.
+  </li>
+
+  <li>
+    <strong>PII identification:</strong>
+    The Identify PII component detects personally identifiable information that
+    may appear in the user's message.
+  </li>
+
+  <li>
+    <strong>PII removal:</strong>
+    The Remove PII component cleanses the text before it continues through the
+    workflow, reducing the risk of exposing sensitive information.
+  </li>
+
+  <li>
+    <strong>Session history:</strong>
+    Previous conversation information is incorporated so that the agent can
+    maintain context across multiple turns.
+  </li>
+
+  <li>
+    <strong>Agent context:</strong>
+    The Add Context component defines SafeStep's role as a cellphone and
+    digital-help assistant for older adults and non-technical users.
+  </li>
+
+  <li>
+    <strong>Task classification:</strong>
+    A Python Sandbox component analyzes the user's request and determines the
+    type of assistance being requested.
+  </li>
+
+  <li>
+    <strong>Knowledge retrieval:</strong>
+    Virtual Knowledge Base input and output components retrieve information
+    relevant to the user's question.
+  </li>
+
+  <li>
+    <strong>Variable management:</strong>
+    Workflow variables preserve information such as the task result, user
+    message, and safety classification.
+  </li>
+
+  <li>
+    <strong>Safety guidance:</strong>
+    A text component adds appropriate caution when a request involves payments,
+    passwords, suspicious links, scams, or other higher-risk situations.
+  </li>
+
+  <li>
+    <strong>Response generation:</strong>
+    The processed request, contextual instructions, retrieved information, and
+    safety guidance are sent to a managed large language model to produce the
+    final response.
+  </li>
+</ol>
+
+<p>
+  This modular design allowed SafeStep to combine conversational context,
+  privacy protection, task classification, knowledge retrieval, safety rules,
+  and response generation in one workflow. It also made the system easier to
+  inspect and refine because each stage had a defined purpose.
+</p>
+
+<h2>Core Functions</h2>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Step-by-Step Guidance</h3>
+    <p>
+      Provides sequential instructions for completing common smartphone,
+      computer, application, and website tasks.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Plain-Language Explanations</h3>
+    <p>
+      Replaces unnecessary technical terminology with direct and accessible
+      explanations.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Scam Awareness</h3>
+    <p>
+      Helps users identify common warning signs in suspicious messages,
+      phishing emails, and fraudulent requests.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Website Safety Support</h3>
+    <p>
+      Guides users in examining website indicators while avoiding guarantees
+      that could create false confidence.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Safer Online Payments</h3>
+    <p>
+      Encourages users to verify payment details, website legitimacy, and
+      unusual requests before proceeding.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Adaptive Assistance</h3>
+    <p>
+      Adjusts the amount of explanation and level of detail according to the
+      user's needs and technical familiarity.
+    </p>
+  </div>
+</div>
+
+<h2>Prompt Engineering</h2>
+
+<p>
+  Prompt writing was central to the project because the prompts established
+  how SafeStep should communicate and respond. The agent needed to remain
+  helpful without overwhelming the user, cautious without becoming
+  unresponsive, and supportive without implying that it could guarantee
+  digital safety.
+</p>
+
+<p>The prompt strategy emphasized several behavioral requirements:</p>
+
+<ul>
+  <li>Use simple and direct language.</li>
+  <li>Present instructions in a logical sequence.</li>
+  <li>Define technical terms when they cannot be avoided.</li>
+  <li>Ask clarifying questions when the user's request is ambiguous.</li>
+  <li>
+    Warn users before potentially sensitive actions involving passwords,
+    payments, downloads, or personal information.
+  </li>
+  <li>
+    Avoid claiming certainty when evaluating websites, messages, or security
+    risks.
+  </li>
+  <li>
+    Encourage users to stop and seek trusted assistance when a situation
+    appears unsafe.
+  </li>
+  <li>Maintain a friendly, calm, patient, and nonjudgmental tone.</li>
+</ul>
+
+<h3>Illustrative Prompt Excerpt</h3>
+
+<p>
+  The following shortened example illustrates the type of behavioral
+  instructions used to define SafeStep's role and communication style:
+</p>
+
+<pre class="code-example"><code>You are SafeStep, a digital-help assistant for older adults
+and non-technical users.
+
+Provide clear, patient, step-by-step guidance.
+
+Use plain language and explain unfamiliar terms.
+
+When a request involves money, passwords, downloads,
+suspicious links, or personal information:
+
+1. Explain the potential risk.
+2. Avoid making guarantees about safety.
+3. Recommend verification steps.
+4. Encourage the user to stop if something appears suspicious.
+5. Suggest contacting a trusted person or official support service
+   when appropriate.</code></pre>
+
+<p>
+  This excerpt is illustrative and summarizes the design principles used in the
+  project rather than reproducing the complete platform configuration.
+</p>
+
+<h2>Task and Risk Classification</h2>
+
+<p>
+  The workflow used a Python Sandbox component to distinguish ordinary device
+  assistance from requests that required additional safety guidance. The
+  classification process could identify categories such as mobile payments,
+  suspicious links, scams, phishing, and general device help.
+</p>
+
+<p>
+  A simplified representation of the logic is shown below:
+</p>
+
+<pre class="code-example"><code class="language-python">task_category = "general_device_help"
+risk_level = "low"
+needs_safety_guidance = False
+
+message_lower = user_message.lower()
+
+if any(term in message_lower for term in [
+    "pay", "payment", "bank", "transfer", "card"
+]):
+    task_category = "mobile_payments"
+    risk_level = "medium"
+    needs_safety_guidance = True
+
+if any(term in message_lower for term in [
+    "link", "website", "url", "click"
+]):
+    task_category = "suspicious_links"
+    risk_level = "high"
+    needs_safety_guidance = True
+
+if any(term in message_lower for term in [
+    "scam", "phishing", "password", "fraud"
+]):
+    task_category = "scam_or_phishing"
+    risk_level = "high"
+    needs_safety_guidance = True</code></pre>
+
+<p>
+  This logic represents the type of classification used to route requests and
+  determine whether the final response should include stronger warnings or
+  verification guidance.
+</p>
+
+<h2>Testing and Iterative Refinement</h2>
+
+<p>
+  I evaluated SafeStep through conversational testing rather than treating the
+  initial workflow and prompt configuration as final. I entered representative
+  questions and reviewed the resulting answers for clarity, usefulness, tone,
+  contextual relevance, and appropriate safety language.
+</p>
+
+<p>Testing scenarios included questions such as:</p>
+
+<ul>
+  <li>How to change a setting on a smartphone.</li>
+  <li>How to navigate an unfamiliar application or website.</li>
+  <li>Whether a message requesting personal information appeared suspicious.</li>
+  <li>What to verify before making an online payment.</li>
+  <li>How to respond to a possible phishing email.</li>
+  <li>How to interpret an unfamiliar warning or notification.</li>
+</ul>
+
+<p>
+  When testing revealed that an answer was too technical, too lengthy, too
+  confident, or insufficiently tailored to the user, I revised the prompts and
+  repeated the interaction. This iterative process helped me understand prompt
+  engineering as a form of behavioral system design rather than a one-time
+  writing task.
+</p>
+
+<h2>Knowledge and Information Sources</h2>
+
+<p>
+  SafeStep was designed to work with information such as trusted
+  cybersecurity guidance, application support documentation, public help
+  pages, frequently asked questions, digital literacy materials, website
+  metadata, screenshots, and structured safety checklists.
+</p>
+
+<p>
+  Although I did not create the knowledge base, I considered how the agent
+  should use available information and communicate it responsibly. For an
+  assistant dealing with digital safety, source quality and update frequency
+  are particularly important because applications change and scam techniques
+  continue to evolve.
+</p>
+
+<p>
+  The project concept therefore included periodic updates to application
+  instructions and safety guidance, along with privacy-conscious access
+  controls and minimal use of personal data.
+</p>
+
+<h2>Challenges and Design Decisions</h2>
+
+<h3>Balancing Simplicity and Accuracy</h3>
+
+<p>
+  The agent needed to make technical information understandable without
+  removing details necessary for the user to complete a task correctly. My
+  approach was to preserve essential information while reorganizing it into
+  shorter steps and defining unfamiliar terms.
+</p>
+
+<h3>Avoiding False Confidence</h3>
+
+<p>
+  A digital safety assistant must not imply that it can guarantee whether a
+  website, message, or transaction is safe. SafeStep was therefore designed to
+  identify warning signs, explain reasons for concern, and recommend
+  verification steps rather than issue absolute judgments.
+</p>
+
+<h3>Handling Ambiguous Requests</h3>
+
+<p>
+  Users may describe a device problem without naming the device, application,
+  operating system, or exact screen they are viewing. The agent therefore
+  needed to ask focused clarifying questions before providing detailed
+  instructions.
+</p>
+
+<h3>Supporting Users Without Overwhelming Them</h3>
+
+<p>
+  Long responses can be especially difficult for users who are already
+  uncertain about a task. I addressed this by emphasizing short, ordered
+  instructions and allowing the interaction to continue one stage at a time.
+</p>
+
+<h3>Designing for a Vulnerable Use Case</h3>
+
+<p>
+  Some users may share screenshots or descriptions containing private
+  information. The workflow's PII identification and removal stages were
+  therefore especially relevant to the project's privacy goals.
+</p>
+
+<h2>Responsible AI and Risk Considerations</h2>
+
+<p>
+  SafeStep was designed as a support tool rather than a substitute for human
+  judgment or professional cybersecurity services. It may help users recognize
+  suspicious patterns, but it cannot verify every website, anticipate every
+  scam, or correctly interpret every unfamiliar interface.
+</p>
+
+<p>Important risks considered during the project included:</p>
+
+<ul>
+  <li>Creating false confidence about whether a website or message is safe.</li>
+  <li>
+    Exposing private or financial information through user-submitted content.
+  </li>
+  <li>Misinterpreting screenshots, interfaces, or incomplete questions.</li>
+  <li>Encouraging overreliance on automated guidance.</li>
+  <li>
+    Creating an interface that is itself inaccessible to the intended users.
+  </li>
+</ul>
+
+<p>
+  These limitations influenced the agent's tone, workflow, and prompt
+  instructions. The intended behavior was to explain, warn, and guide while
+  clearly communicating uncertainty and encouraging users to seek trusted
+  human assistance when appropriate.
+</p>
+
+<h2>Business and Social Value</h2>
+
+<p>
+  SafeStep's primary value is its potential to support digital inclusion.
+  Users who can complete online tasks more confidently may gain greater
+  independence in communication, healthcare access, account management,
+  payments, and other essential services.
+</p>
+
+<p>
+  Caregivers and family members may also benefit from having an additional
+  source of accessible guidance available to the people they support. An
+  organization deploying a similar assistant could potentially reduce repeated
+  support requests while helping users complete tasks more successfully.
+</p>
+
+<p>Possible measures of success include:</p>
+
+<ul>
+  <li>Higher rates of successful task completion.</li>
+  <li>Fewer user errors during common digital processes.</li>
+  <li>Improved user confidence when operating devices.</li>
+  <li>Greater recognition of suspicious websites or messages.</li>
+  <li>Reduced dependence on others for routine digital tasks.</li>
+  <li>Improved access to online services.</li>
+</ul>
+
+<h2>Project Outcome</h2>
+
+<p>
+  The project resulted in a completed SafeStep agent prototype developed on
+  the mAIstro platform. I moved the project from an independently conceived
+  idea to a structured agentic AI solution with a defined audience, purpose,
+  modular workflow, conversational strategy, risk model, and value
+  proposition.
+</p>
+
+<p>
+  I tested and refined the agent through sample conversations, collaborated
+  with other interns during the development process, and presented SafeStep to
+  NeuralSeek as the culmination of my internship work.
+</p>
+
+<h2>HLT Learning Outcomes</h2>
+
+<div class="outcome-section">
+  <h3>Programming and Computational Thinking</h3>
+
+  <p>
+    Although SafeStep was built through the mAIstro platform rather than as a
+    conventional standalone application, the project required computational
+    thinking and workflow design. I decomposed a broad user problem into
+    individual processing stages, variables, conditions, inputs, outputs, and
+    expected behaviors. I also used Python-based logic to support task and risk
+    classification.
+  </p>
+</div>
+
+<div class="outcome-section">
+  <h3>Algorithms and AI System Design</h3>
+
+  <p>
+    The project strengthened my understanding of how an agentic AI system
+    transforms a user request into a contextually appropriate response. I
+    considered how prompts, task classification, conversational history,
+    retrieved knowledge, variables, and safety constraints affected the final
+    output.
+  </p>
+</div>
+
+<div class="outcome-section">
+  <h3>Tools and Platforms</h3>
+
+  <p>
+    I gained practical experience using NeuralSeek's mAIstro platform to
+    design, configure, test, and present an AI agent. I also developed
+    experience with prompt engineering, managed large language models,
+    knowledge retrieval, workflow variables, PII processing, conversational
+    testing, and iterative evaluation.
+  </p>
+</div>
+
+<div class="outcome-section">
+  <h3>Data and Knowledge in AI Systems</h3>
+
+  <p>
+    The internship emphasized the importance of trustworthy, current, and
+    appropriate information in AI systems. Although I did not create the
+    knowledge base, I considered the quality, relevance, update frequency,
+    privacy requirements, and limitations of the information the agent used.
+  </p>
+</div>
+
+<div class="outcome-section">
+  <h3>Professional Skills</h3>
+
+  <p>
+    I practiced translating a real-world need into an AI solution with a
+    clearly defined audience and measurable outcomes. I collaborated with other
+    interns, incorporated feedback, documented the project, and communicated
+    both technical and business aspects of the solution during my final
+    presentation to the company.
+  </p>
+</div>
+
+<h2>Reflection</h2>
+
+<p>
+  SafeStep gave me the opportunity to take ownership of an agentic AI project
+  from concept through presentation. The experience showed me that designing
+  an effective AI assistant involves much more than generating correct
+  responses. The system must also account for the user's background, emotional
+  state, level of technical knowledge, privacy, accessibility, and the
+  consequences of incorrect or overconfident guidance.
+</p>
+
+<p>
+  The project also changed how I understand prompt engineering. I learned that
+  prompts function as behavioral specifications: they define how an agent
+  communicates, responds to uncertainty, handles risk, and adapts to different
+  users. Testing conversations and revising those specifications was one of
+  the most valuable parts of the development process.
+</p>
+
+<p>
+  SafeStep strengthened my ability to connect language technology with a
+  concrete human need. It also reinforced my interest in developing AI systems
+  that are understandable, responsible, and useful to people with different
+  levels of technical experience.
+</p>
+<div class="project-links">
+  <h2>Project Materials</h2>
+
+  <a
+    class="project-button"
+    href="{{ '/files/SafeSTEP.pptx' | relative_url }}"
+  >
+    View Project Presentation
+  </a>
+
+  <a
+    class="project-button"
+    href="{{ '/files/SafeStepAI.dat' | relative_url }}"
+    download
+  >
+    Download Agent Export
+  </a>
+</div>
+<p>
+  After successfully completing the internship program, I earned a
+  <strong>NeuralSeek certification</strong> recognizing my completion of the
+  program and experience developing an agentic AI solution using the mAIstro
+  platform.
+</p>

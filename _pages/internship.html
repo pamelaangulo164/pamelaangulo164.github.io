@@ -4,7 +4,7 @@ excerpt: "An AI-powered assistant designed to help older adults and non-technica
 permalink: /portfolio/safestep/
 author_profile: true
 header:
-  teaser: /images/maistro-workflow.jpg
+  teaser: /images/safestep-workflow.png
 ---
 
 <style>
@@ -425,14 +425,15 @@ header:
 
 <img
   class="project-image"
-  src="{{ '/images/maistro-workflow.jpg' | relative_url }}"
+  src="{{ '/images/safestep-workflow.png' | relative_url }}"
   alt="SafeStep workflow built in NeuralSeek mAIstro"
 >
 
 <p class="image-caption">
-  Figure 1. SafeStep's mAIstro workflow, including privacy processing,
-  conversational context, Python-based classification, knowledge retrieval,
-  safety guidance, and LLM response generation.
+  Figure 1. SafeStep's mAIstro workflow. The workflow includes user input,
+  privacy and PII processing, session history, contextual instructions,
+  Python-based classification, knowledge retrieval, workflow variables, safety
+  guidance, and LLM response generation.
 </p>
 
 
@@ -472,8 +473,14 @@ header:
 
   <li>
     <strong>Knowledge retrieval:</strong>
-    Knowledge-base components make relevant reference information available to
-    later stages of the workflow.
+    Virtual Knowledge Base components make relevant reference information
+    available to later stages of the workflow.
+  </li>
+
+  <li>
+    <strong>Workflow variables:</strong>
+    Variables such as the user message, task category, risk level, knowledge
+    result, and safety flag are passed between different parts of the agent.
   </li>
 
   <li>
@@ -909,9 +916,15 @@ guarantee safety.</code></pre>
   For the newer version of the prototype, I configured
   <code>gpt-oss-120b</code> as the main model used by the SafeStep workflow and
   kept NeuralSeek's separate Translate model available for language-related
-  functionality. I used NeuralSeek-hosted models so that the prototype could
-  run within the platform without depending on a separately configured external
-  API connection.
+  functionality.
+</p>
+
+<p>
+  I chose the NeuralSeek-hosted model setup so I could continue testing the
+  prototype within the platform without relying on an external API connection.
+  The main model was configured for functions such as knowledge seeking, PII
+  detection, entity extraction, categorization, intent creation, fallback
+  language identification, sentiment handling, and mAIstro workflows.
 </p>
 
 <img
@@ -921,9 +934,9 @@ guarantee safety.</code></pre>
 >
 
 <p class="image-caption">
-  Figure 5. LLM configuration used during post-internship testing. The setup
-  includes gpt-oss-120b for SafeStep's main LLM functions and a separate
-  Translate model.
+  Figure 5. Model configuration used during post-internship testing, with
+  gpt-oss-120b handling the main SafeStep workflow and a separate Translate
+  model available for language-related tasks.
 </p>
 
 

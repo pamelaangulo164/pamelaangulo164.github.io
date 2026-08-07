@@ -143,6 +143,25 @@ header:
     margin-bottom: 1.5rem;
   }
 
+  .project-links {
+    margin: 1.5rem 0 2.5rem;
+  }
+
+  .project-button {
+    display: inline-block;
+    margin: 0.25rem 0.4rem 0.25rem 0;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    background-color: #4a6fa5;
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  .project-button:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
   @media (max-width: 600px) {
     .project-metadata th,
     .project-metadata td {
@@ -162,8 +181,6 @@ header:
 
 
 <section class="project-hero">
-  <h1>SafeStep: An Agentic AI Assistant for Digital Safety</h1>
-
   <p class="project-subtitle">
     Internship project developed using NeuralSeek's mAIstro platform
   </p>
@@ -173,9 +190,8 @@ header:
 <div class="project-summary">
   <p>
     During my internship at NeuralSeek, I conceived, designed, and built
-    <strong>SafeStep</strong>, an AI assistant intended to help older adults and
-    non-technical users navigate everyday digital tasks more safely and
-    independently.
+    SafeStep, an AI assistant intended to help older adults and non-technical
+    users navigate everyday digital tasks more safely and independently.
   </p>
 
   <p>
@@ -283,19 +299,19 @@ header:
 <h2>What is mAIstro?</h2>
 
 <p>
-  I built SafeStep in <strong>mAIstro</strong>, NeuralSeek's visual environment
-  for building AI agents. Instead of writing one program that handles everything
-  from beginning to end, mAIstro lets the developer organize an agent as a
-  workflow of connected components. Each component has a specific job, and the
-  information produced by one step can be passed to the next.
+  I built SafeStep in mAIstro, NeuralSeek's visual environment for building AI
+  agents. Instead of writing one program that handles everything from beginning
+  to end, mAIstro allows an agent to be organized as a workflow made up of
+  connected components. Each component has a particular purpose, and the output
+  of one step can be passed to another step later in the workflow.
 </p>
 
 <p>
   This structure worked well for SafeStep because I wanted more control over
-  what happened before a question reached the final language model. For example,
-  the workflow could process personal information, maintain conversation
-  history, classify the user's request, retrieve relevant knowledge, and add
-  safety instructions before asking the LLM to produce the final response.
+  what happened before a question reached the final language model. The workflow
+  could process personal information, preserve conversation history, classify
+  the request, retrieve relevant knowledge, add safety instructions, and then
+  send the resulting information to the LLM.
 </p>
 
 
@@ -343,12 +359,12 @@ header:
   source of support rather than a replacement for human help.
 </p>
 
-<div class="callout">
-  <strong>What I took from the interviews:</strong>
-  SafeStep needed to be specific, patient, easy to follow, and especially
-  careful around payments, passwords, unfamiliar websites, and situations where
-  the user was unsure whether something could be trusted.
-</div>
+<p>
+  Overall, the interviews helped me see that SafeStep needed to be specific,
+  patient, easy to follow, and especially careful around payments, passwords,
+  unfamiliar websites, and situations where the user was unsure whether
+  something could be trusted.
+</p>
 
 
 <h2>Project Goals</h2>
@@ -457,7 +473,7 @@ header:
 
   <li>
     <strong>Agent context:</strong>
-    An Add Context component establishes SafeStep's purpose, audience, and
+    An Add Context component establishes the agent's purpose, audience, and
     expected communication style.
   </li>
 
@@ -492,6 +508,14 @@ header:
   </li>
 
 </ol>
+
+<p>
+  The completed agent can also be exported from mAIstro as a
+  <code>.dat</code> file. The exported file preserves the agent's workflow and
+  configuration so that it can later be imported into mAIstro. It is not a
+  standalone application and is intended to be opened through the mAIstro
+  environment.
+</p>
 
 
 <h2>Python Sandbox</h2>
@@ -629,7 +653,7 @@ print(json.dumps({
 <h2>Prompt Engineering and Workflow Variables</h2>
 
 <p>
-  Prompt engineering was another important part of SafeStep. I wanted the
+  Prompt engineering was another important part of the project. I wanted the
   response to be understandable to someone who might not know technical terms,
   but I also wanted the model to use information created earlier in the
   workflow.
@@ -665,7 +689,7 @@ guarantee safety.</code></pre>
 
 <p>
   Keeping these values separate made the workflow easier for me to inspect and
-  debug. I could check whether the problem was in the original input,
+  debug. I could check whether a problem came from the original input,
   classification, safety logic, retrieved knowledge, or final response.
 </p>
 
@@ -673,17 +697,17 @@ guarantee safety.</code></pre>
 <h2>Model Configuration</h2>
 
 <p>
-  The current SafeStep configuration uses <code>gpt-oss-120b</code> for the main
-  LLM functions and a separate Translate model for language-related tasks. The
-  main model is connected to functions used by the workflow, including Seek,
-  PII detection, entity extraction, categorization, intent creation, fallback
-  language identification, fallback sentiment, and mAIstro.
+  In the configuration shown below, <code>gpt-oss-120b</code> is used for the
+  main LLM functions and a separate Translate model is available for
+  language-related tasks. The main model is connected to functions used by the
+  workflow, including Seek, PII detection, entity extraction, categorization,
+  intent creation, fallback language identification, fallback sentiment, and
+  mAIstro.
 </p>
 
 <p>
-  Keeping translation separate also gives the workflow a clear place to handle
-  language-related processing instead of putting every responsibility on the
-  main model.
+  Keeping translation separate also provides a clear place for language-related
+  processing instead of assigning every function to the same model.
 </p>
 
 <img
@@ -693,45 +717,46 @@ guarantee safety.</code></pre>
 >
 
 <p class="image-caption">
-  Figure 3. Current SafeStep model configuration with gpt-oss-120b as the main
-  model and a separate Translate model.
+  Figure 3. SafeStep model configuration with gpt-oss-120b for the main workflow
+  and a separate Translate model.
 </p>
 
 
 <h2>Testing with Different Inputs</h2>
 
 <p>
-  I tested SafeStep with different kinds of input because one successful answer
-  did not tell me whether the workflow was behaving consistently. The test cases
-  included an ordinary or incomplete request, a question about sending money
-  through Zelle, and a higher-risk scenario involving a message that asked the
-  user to click a link and enter a banking password.
+  I tested SafeStep using different kinds of input because one successful answer
+  was not enough to tell me whether the workflow was behaving consistently. I
+  used three types of scenarios: an ordinary or incomplete request, a question
+  involving a money transfer through Zelle, and a higher-risk message asking the
+  user to click a link and provide a banking password.
 </p>
 
 <p>
-  These inputs let me look at different parts of the system. The incomplete
-  input tested whether the agent would ask for clarification rather than make
-  assumptions. The Zelle question tested how SafeStep handled a legitimate
-  financial task that still required some caution. The phishing-style input
-  tested whether the system would recognize a more serious risk and give a
-  stronger warning.
+  The inputs were chosen to exercise different parts of the workflow. An
+  incomplete request tested whether the agent would ask for more information
+  instead of guessing. The Zelle question tested how it handled a legitimate
+  financial task that still called for some caution. The phishing-style message
+  tested whether stronger safety guidance would appear when the input contained
+  more serious warning signs.
 </p>
+
 
 <img
   class="project-image"
   src="{{ '/images/agent-output1.png' | relative_url }}"
-  alt="SafeStep test output from one of the evaluation inputs"
+  alt="SafeStep output from one test input"
 >
 
 <p class="image-caption">
-  Figure 4. SafeStep output from one of the test inputs used during evaluation.
+  Figure 4. SafeStep output from one of the inputs used during testing.
 </p>
 
 
 <img
   class="project-image"
   src="{{ '/images/agent-output2.png' | relative_url }}"
-  alt="SafeStep test output from a second evaluation input"
+  alt="SafeStep output from another test input"
 >
 
 <p class="image-caption">
@@ -742,7 +767,7 @@ guarantee safety.</code></pre>
 <img
   class="project-image"
   src="{{ '/images/agent-output3.png' | relative_url }}"
-  alt="SafeStep test output from a third evaluation input"
+  alt="SafeStep output from another test input"
 >
 
 <p class="image-caption">
@@ -750,18 +775,25 @@ guarantee safety.</code></pre>
 </p>
 
 <p>
-  I kept the tests different on purpose. I wanted to see whether SafeStep could
-  respond appropriately when the user needed clarification, when the question
-  involved a normal financial task, and when the input contained warning signs
-  associated with phishing.
+  I intentionally used different kinds of questions because I wanted to see how
+  the agent behaved when the user needed clarification, when a question involved
+  a normal financial task, and when the input contained warning signs associated
+  with phishing.
 </p>
 
 <p>
-  Testing also showed me that a response could sound clear while still having a
-  problem. One response included contact information that had not been verified.
-  Another included product-specific information that was no longer current.
-  Those examples were useful because they showed that fluency alone was not a
-  good measure of response quality.
+  The tests also showed me that a response could sound clear while still having
+  a problem. One response included contact information that had not been
+  verified, while another included product-specific information that was no
+  longer current. These examples reminded me that fluency alone is not a good
+  measure of response quality.
+</p>
+
+<p>
+  I adjusted the safety instructions so that the agent would not invent phone
+  numbers, email addresses, URLs, or other organizational contact details.
+  Instead, users should be directed to contact information obtained through an
+  official application, website, card, statement, or another verified source.
 </p>
 
 
@@ -776,9 +808,9 @@ guarantee safety.</code></pre>
 </p>
 
 <p>
-  I used the mAIstro evaluation view to inspect the workflow stage by stage. That
-  made it possible to see the actual prompt being sent to the model and compare
-  it with what I expected the workflow to produce.
+  I used the mAIstro evaluation view to inspect the workflow stage by stage.
+  That made it possible to see the actual prompt being sent to the model and
+  compare it with what I expected the workflow to produce.
 </p>
 
 <p>
@@ -844,7 +876,7 @@ guarantee safety.</code></pre>
     <h3>Uncertainty</h3>
 
     <p>
-      SafeStep is instructed to explain warning signs and verification steps
+      The agent is instructed to explain warning signs and verification steps
       rather than guarantee that something is safe.
     </p>
   </div>
@@ -895,10 +927,10 @@ guarantee safety.</code></pre>
 <h3>Debugging a Multi-Stage AI System</h3>
 
 <p>
-  SafeStep also changed how I think about LLM applications. The model is only
-  one part of the system. Input handling, privacy processing, classification,
-  retrieval, variables, and prompt construction all affect what the final model
-  receives.
+  SafeStep also changed how I think about LLM applications. The language model
+  is only one part of the system. Input handling, privacy processing,
+  classification, retrieval, variables, and prompt construction all affect what
+  the final model receives.
 </p>
 
 <p>
@@ -917,8 +949,8 @@ guarantee safety.</code></pre>
 </p>
 
 <p>
-  I tested and refined the agent through different inputs, collaborated with
-  other interns, and presented SafeStep to NeuralSeek at the conclusion of the
+  I tested and refined the agent using different inputs, collaborated with other
+  interns, and presented SafeStep to NeuralSeek at the conclusion of the
   internship.
 </p>
 
@@ -928,6 +960,41 @@ guarantee safety.</code></pre>
   systematic measurements would be needed before deploying an assistant like
   SafeStep for real-world use.
 </p>
+
+
+<h2>Project Materials</h2>
+
+<p>
+  I presented SafeStep at the conclusion of my internship. The presentation
+  summarizes the problem I focused on, the intended users, the main functions of
+  the agent, its limitations and risks, and the potential value of the project.
+  I have also included the exported agent file.
+</p>
+
+<p>
+  The <code>.dat</code> file contains the SafeStep workflow and agent
+  configuration. It is not a standalone executable file and must be imported
+  into NeuralSeek's mAIstro environment to be opened and used.
+</p>
+
+<div class="project-links">
+
+  <a
+    class="project-button"
+    href="{{ '/files/SafeSTEP.pptx' | relative_url }}"
+  >
+    View SafeStep Presentation
+  </a>
+
+  <a
+    class="project-button"
+    href="{{ '/files/SafeStepAI.dat' | relative_url }}"
+    download
+  >
+    Download SafeStep Agent
+  </a>
+
+</div>
 
 
 <h2>HLT Learning Outcomes</h2>
